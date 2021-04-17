@@ -1,7 +1,55 @@
-<html xmlns:th="http://www.thymeleaf.org">
-    <head><title>Home Page</title></head>
-    <body>
-        <h1>Hello !</h1>
-       <p>Welcome to <span th:text="${appName}">Our App</span></p>
-    </body>
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<html>
+<head>
+	<title>Home Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/vaccine.css" rel="stylesheet">
+	<script src="../js/bootstrap.min.js" defer></script>
+</head>
+<body>
+	<div class="container register">
+		<div class="row">
+			<div class="col-md-3 register-left">
+				<img src="../assets/img/vaccine.png" alt=""/>
+				<h3>Bienvenido</h3>
+				<p>Registro de vacunación mundial</p>
+			</div>
+			<div class="col-md-9 register-right">
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+						<h3 class="register-heading">Registro de vacunación</h3>
+						<div class="row register-form">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" name="fecha" class="form-control" placeholder="Fecha* dd/mm/yyyy" value="" />
+								</div>
+								<br/>
+								<div class="form-group">
+									<input type="text" name="segundaDosis" class="form-control" placeholder="Cantidad segunda dosis*" value="" />
+								</div>
+								<br/>
+								<div class="form-group">
+									<input type="text" name="tipoVacuna" class="form-control" placeholder="Tipo de vacuna*" value="" />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" name="primeraDosis" class="form-control" placeholder="Cantidad primera dosis*" value="" />
+								</div>
+								<br/>
+								<div class="form-group">
+									<input type="text" name="pais" class="form-control" placeholder="País*" value="" />
+								</div>
+							
+								<input type="submit" class="btnRegister"  value="Registro"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
