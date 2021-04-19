@@ -1,0 +1,78 @@
+<div th:fragment="record">
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="../img/vaccine.png" th:src="@{/img/vaccine.png}" alt=""/>
+                <h3>Bienvenido</h3>
+                <p>Registro de vacunación mundial</p>
+            </div>
+            <div class="col-md-9 register-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Registro de vacunación</h3>
+                        <form action="/vaccine/" method="post" class="needs-validation" novalidate>
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="fecha" class="form-control" placeholder="Fecha* dd/mm/yyyy" value="" required/>
+                                        <div class="invalid-feedback">
+                                            Favor de escribir una fecha.
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="form-group">
+                                        <input type="text" name="segundaDosis" class="form-control" placeholder="Cantidad segunda dosis*" value="" required/>
+                                        <div class="invalid-feedback">
+                                            Favor de escribir una cantidad.
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="form-group">
+                                        <select name="tipoVacuna" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+                                            <option selected disabled value="">Tipo de vacuna*</option>
+                                            <option value="Pfizer">BioNTech, Pfizer</option>
+                                            <option value="CanSino">CanSino</option>
+                                            <option value="CoronaVac">CoronaVac</option>
+                                            <option value="Covaxin">Covaxin</option>
+                                            <option value="AstraZeneca">AstraZeneca</option>
+                                            <option value="Spuntnik">Spuntnik V</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Favor de seleccionar una vacuna.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="primeraDosis" class="form-control" placeholder="Cantidad primera dosis*" value="" required/>
+                                        <div class="invalid-feedback">
+                                            Favor de escribir una cantidad.
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <select name="pais" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+                                                <option selected disabled value="">País*</option>
+                                                <option value="Mexico">México</option>
+                                                <option value="Espana">España</option>
+                                                <option value="EUA">EUA</option>
+                                                <option value="China">China</option>
+                                                <option value="Rusia">Rusia</option>
+                                                <option value="Brasil">Brasil</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Favor de seleccionar un país.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btnRegister" type="submit">Registro</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
