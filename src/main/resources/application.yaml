@@ -5,7 +5,8 @@ spring:
     prefix: classpath:/templates/
     suffix: .html
   application:
-    name: Vaccine
+    buckedName: example_data_vaccine
+    kind: Vaccine
 
 server:
   port: 8010

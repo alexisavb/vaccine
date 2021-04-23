@@ -1,0 +1,34 @@
+<div th:fragment="table">
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-dark">
+                    <thead>
+                    <tr>
+                        <th scope="col">País</th>
+                        <th scope="col">Vacuna</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Primera Dosis</th>
+                        <th scope="col">Segunda Dosis</th>
+                        <th scope="col">Primera Dosis Total</th>
+                        <th scope="col">Segunda Dosis Total</th>
+                        <th scope="col">Población</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="vaccine: ${vaccines}">
+                        <td cope="row" th:text="${vaccine.pais}" >hola</td>
+                        <td th:text="${vaccine.tipoVacuna}" />
+                        <td th:text="${vaccine.fechaPrimerDosis}" />
+                        <td th:text="${vaccine.primeraDosis}" />
+                        <td th:text="${vaccine.segundaDosis}" />
+                        <td th:text="${vaccine.primeraDosisTotal}" />
+                        <td th:text="${vaccine.segundaDosisTotal}" />
+                        <td th:text="${vaccine.poblacionTotal}" />
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

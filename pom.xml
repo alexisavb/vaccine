@@ -47,6 +47,38 @@
             <groupId>org.thymeleaf</groupId>
             <artifactId>thymeleaf-spring5</artifactId>
         </dependency>
+
+        <!-- API Google -->
+
+        <!-- service: Speech -->
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-speech</artifactId>
+            <version>0.32.0-alpha</version>
+        </dependency>
+
+        <!-- service: Storage -->
+
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-storage</artifactId>
+            <version>1.14.0</version>
+        </dependency>
+
+        <!-- service: DataStore -->
+
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-datastore</artifactId>
+            <version>1.22.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
+            <!-- version>1.3.1</version-->
+            <version>1.9.63</version>
+        </dependency>
     </dependencies>
 
 </project>
